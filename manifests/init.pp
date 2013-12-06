@@ -1,11 +1,12 @@
-# Public: Install ADE.app into /Applications.
+# Installs ADE
 #
 # Examples
 #
 #   include ade
 class ade {
   package { 'ADE':
-    provider => 'appdmg',
+    ensure   => 'installed',
+    provider => 'pkgdmg',
     source   => 'http://download.adobe.com/pub/adobe/digitaleditions/ADE_2.0_Installer.dmg'
   }
 }
